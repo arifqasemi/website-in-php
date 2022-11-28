@@ -39,22 +39,17 @@
 
     <section class="profile">
         <div class="profile-container">
-            <h4>this is your profile</h4>
-        </div>
-
+        
+      <h2>wellcom
         <?php
+        session_start();
 
-            $ip = geIpAddress();
-            $query= "SELECT * FROM user WHERE IpAddress='$ip'";
-            $result = mysqli_query($conn,$query);
-            $fetch=mysqli_fetch_assoc($result);
-            if($fetch>0){
-                $name=$fetch['username'];
-                echo "wellcome $name ";
-            }
+           echo $_SESSION['email'];
 
-        ?>
+        ?></h2>
 
+        <a href="./logout.php">log out</a>
+        </div>
     </section>
    
     <footer class="footer section-p1">

@@ -40,6 +40,10 @@
       <div class="contain">
         <h4>cash delivery</h4>
         <h4>online payment</h4>
+        <?php
+        session_start();
+         echo $_SESSION['fullname'];
+        ?>
       </div>
 
 <div class="ff">

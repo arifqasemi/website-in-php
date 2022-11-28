@@ -1,5 +1,6 @@
 <?php
 include "../admin_area/connection.php";
+include "../function.php";
 
 ?>
 
@@ -41,9 +42,17 @@ if(isset($_POST['login'])){
     $data=mysqli_fetch_assoc($resul);
     $fetch=mysqli_num_rows($resul);
 
+
+   
     if($fetch>0){
         if(password_verify($password,$data['password'])){
-            echo "<script>window.open('profile.php','_self')</script>";
+            
+            // echo "<script>window.open('../payment.php','_self')</script>";
+          session_start();
+          $_SESSION['email']=$email;
+          header('location:./profile.php');
+                        
+            
         }else{
             echo "invalid password or email";
         }

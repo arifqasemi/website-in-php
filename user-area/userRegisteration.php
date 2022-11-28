@@ -50,6 +50,7 @@ include "../function.php";
    $resultcheck=mysqli_query($conn, $check);
    $fetch=mysqli_num_rows($resultcheck);
    if($fetch>0){
+    session_start();
     $_SESSION['fullname']=$username;
     echo "<script>alert('you have some orders in the cart')</script>";
     echo "<script>window.open('../payment.php','_self')</script>";
@@ -71,6 +72,8 @@ include "../function.php";
     <input type="submit" class="btn" value="Register" name="submit">
 
         </form>
+        <div><p> <a href="login.php">Sign in</a></p></div>
+
       </div>
 
       </section>
