@@ -1,0 +1,11 @@
+.payment{
+    position: absolute;
+    top: 20vh;
+}
+body{
+    height: 100vh;
+}
+footer{
+    position: relative;
+    top: 40vh;
+}

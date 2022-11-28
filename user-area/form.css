@@ -1,0 +1,46 @@
+
+.loginform{
+    position: relative;
+    top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.form{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   width: 100%; 
+   
+}
+
+
+
+.form input{
+    padding: 10px 0;
+    outline: none;
+    border: 1px solid rgb(151, 149, 149);
+    margin: 10px 0;
+}
+.container1{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    height: 60vh;
+    padding: 50px;
+    
+}
+
+
+.btn{
+    background-color: #088178;
+}
+
+.btn:hover{
+    background-color: #444646;
+    color: white;
+}
+

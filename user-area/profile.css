@@ -1,0 +1,17 @@
+.profile{
+    /* background-color: aqua; */
+    height: 40vh;
+    width: 100%;
+    position: absolute;
+    top: 10vh;
+   
+}
+
+body{
+    height: 100vh;
+}
+
+footer{
+    position: relative;
+    top: 60vh;
+}

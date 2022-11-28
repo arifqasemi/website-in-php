@@ -1,0 +1,32 @@
+.cathegory{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  border-radius: 15px;
+}
+
+.cathegory a{
+    text-decoration: none;
+    padding: 0 10px;
+    font-size: large;
+    color: white;
+    text-transform: capitalize;
+    font-weight: 600;
+    background-color:#088178;
+    border-radius: 5px;
+   padding: 10px 12px;
+   margin: 0 5px;
+}
+
+.cathegory a:hover{
+  color: rgb(158, 158, 158);
+}
+
+.filter-nave{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
