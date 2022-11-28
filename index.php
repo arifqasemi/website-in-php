@@ -280,38 +280,7 @@
             <button class="btn1">Sign Up</button>
          </div>
     </section>
-    <section class="Cart">
-        <div class="cart-container">
-           <div class="cart-icon">
-               <i class="fa fa-basket-shopping"> <span>Cart</span></i>
-           </div>
-           <div class="cart-details">
-               <h3>Item</h3>
-               <h3>Unit price</h3>
-               <h3>Units</h3>
-           </div>
-
-           <div class="cartItem">
-           <!-- <div class="cartItem-element">
-               <div class="product-image">
-               <img src="/image/diamon12.png" alt="">
-               <h4>daimond</h4>
-              </div>
-               <p>12</p>
-               <div class="product-unit">
-                  <a class="lost"> <i class="fa fa-minus"></i></a>
-                   <p>1</p>
-                   <a><i class="fa fa-plus"></i></a>
-               </div>
-           </div> -->
-       </div>
-           <div class="cart-subtotal">
-               <h3 class="subtotal">Subtotal <span>(Item)</span></h3>
-               <h3>Proceed to CheckOut</h3>
-
-           </div>
-        </div>
-   </section>
+   
 
     <footer class="footer section-p1">
         
