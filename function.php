@@ -2,7 +2,7 @@
 
 
 include "admin_area/connection.php";
-
+session_start();
 
 
 
@@ -377,7 +377,15 @@ function delete(){
 }
 
 
-
+function getUserItem(){
+    global $conn;
+  $email=$_SESSION['email'];
+  $requst="SELECT * FROM user where email='$email'";
+  $quy=mysqli_query($conn,$requst);
+  $date=mysqli_fetch_assoc($quy);
+  $username=$data['username'];
+  echo $username;
+}
 
 
 

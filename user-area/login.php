@@ -55,7 +55,7 @@ if(isset($_POST['login'])){
         if(password_verify($password,$data['password'])){
             if($fetch==1 && $num_rows==0){
                 $_SESSION['email']=$email;
-                header('location:../profile.php');
+                header('location:profile.php');
 
             }else{
                 $_SESSION['email']=$email;

@@ -2,6 +2,7 @@
  include "../admin_area/connection.php";
 
  include "../function.php";
+//  session_start();
 ?>
 
 
@@ -23,7 +24,7 @@
         <div>
             <ul class="navbar">
             <li><a href="../index.php">Home</a></li>
-            <li><a class="active" href="../shopping.php">Shop</a></li>
+            <li><a href="../shopping.php">Shop</a></li>
             <li><a href="../blog.php">Blog</a></li>
             <li><a href="../contact.php">Contact</a></li>
             <li><a href="../about.php">About</a></li>
@@ -40,86 +41,52 @@
     <section class="profile">
         <div class="profile-container">
         <?php
-        session_start();
+        // session_start();
         if(isset($_SESSION['email'])){
           $email=$_SESSION['email'];
             $query="SELECT * FROM user where email='$email'";
             $resul=mysqli_query($conn,$query);
             $data=mysqli_fetch_assoc($resul);
             $name=$data['username'];
-            echo "<h2><i class='fa fa-user'></i>
-            <br>" . $name."</h2>";
+            echo "<div class='prof-contain'>
+            <img src='../image/profile.png' alt=''>
+            <h2>".$name."</h2>
+            <a href='profile.php?edit_account'>Edite my Account</a>
+            <a href='profile.php?my_order'>My orders</a>
+            <a href='profile.php?pending_order'>Pending order</a>
+            <a href='profile.php?delete_account'>Delete my Account</a>
+            <a href='logout.php'>logout</a>
+             </div>";
            
         }else{
-            echo "<h2><i class='fa fa-user'></i>
-            <br> wellcome guest</h2>";
+            echo "<div class='prof-contain'>
+            <img src='../image/profile.png' alt=''>
+            <h2>wellcome guest</h2>
+            </div>";
         }
 
-if(isset($_SESSION['email'])){
-    echo "<a href='./logout.php'>logout</a>";
-}else{
-    echo "<a href='./login.php'>login</a>";
-}
-
+        if(isset($_SESSION['email'])){
+            echo "<div class='prof-contain'>
+            </div>";
+        }else{
+            echo "<div class='guest'>
+            <a href='./login.php'>login</a>
+            </div> ";
+        }
+       
 ?>
       
 
         </div>
     </section>
-   
-    <footer class="footer section-p1">
-        
-            <div class="Contact">
-                <h3>Contact</h3>
-                <p><span>Address:</span> 526 Wellingto Road Streat 32 San Francisco</p>
-                <p><span>Phone:</span> +1222305/(+9)0345683516</p>
-                <p><span>Hours:</span> 10.00-18.00,Mon-Son</p>
-                <div class="follow">
-                    <h3>Follow Us:</h3>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
+   <?php
 
-            </div>
-            <div class="About">
-                <h3>About</h3>
-                <p>About Us</p>
-                <p>Delivery Information</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Condition</p>
-                <p>Contact Us</p>
+if(isset($_GET['my_order'])){
 
-            </div>
-            <div class="Instal-app">
-                <h3>My Account</h3>
-                <p>Sign In</p>
-                <p>View Cart</p>
-                <p>My Wishlist</p>
-                <p>Track My Order</p>
-                <p>Help</p>
+}
 
-            </div>
-            <div class="My-account">
-                <h3>Install App</h3>
-                <p>From App Store Or Google Play</p>
-                <div class="row">
-                <img src="image/iconapp.png" alt="">
-                <img src="image/iconapp1.png" alt="">
-            </div>
-               <p>Secure Payment Getways</p>
-               <img src="image/pay.png" alt="">
-            </div>
-            <div class="copyright">
-                <p>© 2022, Arif Sultani-HTML,CSS Ecommerce</p>
-            </div>
-    </footer>
-    <script>
-        
 
-     </script>
-    <script src="main.js"></script>
-    <!-- <script src="shop.js"></script> -->
+?>
 
 </body>
 </html>

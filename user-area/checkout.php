@@ -43,10 +43,7 @@ include "../admin_area/connection.php";
 
 
         if(!isset($_SESSION['fullname'] )){
-          
                 include('login.php');
-           
-     
         }else{
             include('../payment.php');
         }
