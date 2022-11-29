@@ -58,6 +58,7 @@ if(isset($_POST['login'])){
                 header('location:../profile.php');
 
             }else{
+             echo "<script>alert('you have some item in the cart')</script>";
             echo "<script>window.open('../payment.php','_self')</script>";
         }
             // echo "<script>window.open('../payment.php','_self')</script>";

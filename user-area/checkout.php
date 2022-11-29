@@ -17,7 +17,7 @@ include "../admin_area/connection.php";
     <link rel="stylesheet" href="../cathegory.css">
 </head>
 <body>
-   <!-- <section class="header">
+   <section class="header">
     <a href=""><img src="/image/logo.png" alt=""></a>
         <div>
             <ul class="navbar">
@@ -34,7 +34,7 @@ include "../admin_area/connection.php";
             <i id="hamburger" class="fas fa-outdent hamburger"></i>
         </div>
     
-    </section> -->
+    </section>
     <section class="checkout">
    
 
@@ -55,59 +55,7 @@ include "../admin_area/connection.php";
        ?>
 
    </section>
-    <footer class="footer section-p1">
-        
-            <div class="Contact">
-                <h3>Contact</h3>
-                <p><span>Address:</span> 526 Wellingto Road Streat 32 San Francisco</p>
-                <p><span>Phone:</span> +1222305/(+9)0345683516</p>
-                <p><span>Hours:</span> 10.00-18.00,Mon-Son</p>
-                <div class="follow">
-                    <h3>Follow Us:</h3>
-                    <i class="fa-brands fa-facebook"></i>
-                    <i class="fa-brands fa-twitter"></i>
-                    <i class="fa-brands fa-youtube"></i>
-                </div>
 
-            </div>
-            <div class="About">
-                <h3>About</h3>
-                <p>About Us</p>
-                <p>Delivery Information</p>
-                <p>Privacy Policy</p>
-                <p>Terms & Condition</p>
-                <p>Contact Us</p>
-
-            </div>
-            <div class="Instal-app">
-                <h3>My Account</h3>
-                <p>Sign In</p>
-                <p>View Cart</p>
-                <p>My Wishlist</p>
-                <p>Track My Order</p>
-                <p>Help</p>
-
-            </div>
-            <div class="My-account">
-                <h3>Install App</h3>
-                <p>From App Store Or Google Play</p>
-                <div class="row">
-                <img src="image/iconapp.png" alt="">
-                <img src="image/iconapp1.png" alt="">
-            </div>
-               <p>Secure Payment Getways</p>
-               <img src="image/pay.png" alt="">
-            </div>
-            <div class="copyright">
-                <p>© 2022, Arif Sultani-HTML,CSS Ecommerce</p>
-            </div>
-    </footer>
-    <script>
-        
-
-     </script>
-    <script src="main.js"></script>
-    <!-- <script src="shop.js"></script> -->
 
 </body>
 </html>
