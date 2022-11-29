@@ -42,15 +42,26 @@ if(isset($_POST['login'])){
     $data=mysqli_fetch_assoc($resul);
     $fetch=mysqli_num_rows($resul);
 
-
    
+
+    // getting product form cart it has
+    $ip = geIpAddress();
+    $requst="SELECT * FROM cartdetails where IpAddress='$ip'";
+   $quy=mysqli_query($conn,$requst);
+   $date=mysqli_fetch_assoc($quy);
+   $num_rows=mysqli_num_rows($quy);
     if($fetch>0){
         if(password_verify($password,$data['password'])){
-            
+            if($fetch==1 && $num_rows==0){
+                session_start();
+                $_SESSION['email']=$email;
+                header('location:../profile.php');
+
+            }else{
+            echo "<script>window.open('../payment.php','_self')</script>";
+        }
             // echo "<script>window.open('../payment.php','_self')</script>";
-          session_start();
-          $_SESSION['email']=$email;
-          header('location:./profile.php');
+         
                         
             
         }else{

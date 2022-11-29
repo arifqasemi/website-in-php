@@ -19,7 +19,7 @@
 </head>
 <body>
    <section class="header">
-    <a href=""><img src="/image/logo.png" alt=""></a>
+    <a href=""><img src="../image/logo.png" alt=""></a>
         <div>
             <ul class="navbar">
             <li><a href="../index.php">Home</a></li>
@@ -39,16 +39,31 @@
 
     <section class="profile">
         <div class="profile-container">
-        
-      <h2>wellcom
         <?php
         session_start();
+        if(isset($_SESSION['email'])){
+          $email=$_SESSION['email'];
+            $query="SELECT * FROM user where email='$email'";
+            $resul=mysqli_query($conn,$query);
+            $data=mysqli_fetch_assoc($resul);
+            $name=$data['username'];
+            echo "<h2><i class='fa fa-user'></i>
+            <br>" . $name."</h2>";
+           
+        }else{
+            echo "<h2><i class='fa fa-user'></i>
+            <br> wellcome guest</h2>";
+        }
 
-           echo $_SESSION['email'];
+if(isset($_SESSION['email'])){
+    echo "<a href='./logout.php'>logout</a>";
+}else{
+    echo "<a href='./login.php'>login</a>";
+}
 
-        ?></h2>
+?>
+      
 
-        <a href="./logout.php">log out</a>
         </div>
     </section>
    

@@ -17,7 +17,7 @@ include "../admin_area/connection.php";
     <link rel="stylesheet" href="../cathegory.css">
 </head>
 <body>
-   <section class="header">
+   <!-- <section class="header">
     <a href=""><img src="/image/logo.png" alt=""></a>
         <div>
             <ul class="navbar">
@@ -34,19 +34,26 @@ include "../admin_area/connection.php";
             <i id="hamburger" class="fas fa-outdent hamburger"></i>
         </div>
     
-    </section>
+    </section> -->
     <section class="checkout">
    
 
-<!-- <div class="container1"> -->
+
 <?php
-        if(!isset($_SESSION['fullname'])){
-     include('userRegisteration.php');
+
+
+        if(!isset($_SESSION['fullname'] )){
+          
+                include('login.php');
+           
+     
         }else{
-            include('payment.php');
+            include('../payment.php');
         }
+
+       
        ?>
-<!-- </div> -->
+
    </section>
     <footer class="footer section-p1">
         

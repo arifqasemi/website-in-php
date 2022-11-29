@@ -1,7 +1,7 @@
 .profile{
-    /* background-color: aqua; */
+    background-color: #ececf0;
     height: 40vh;
-    width: 100%;
+    width: 99%;
     position: absolute;
     top: 10vh;
    
@@ -14,4 +14,19 @@ body{
 footer{
     position: relative;
     top: 60vh;
+}
+
+
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 10vh;
+    left: 7vh;
+    background-color: white;
+    width: 10%;
+    height: 60%;
+   
 }
