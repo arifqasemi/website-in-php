@@ -37,10 +37,25 @@
     
     </section>
     <section class="payment">
+        <?php
+          $ip = geIpAddress();
+          $requst="SELECT * FROM cartdetails where IpAddress='$ip'";
+         $quy=mysqli_query($conn,$requst);
+         $date=mysqli_fetch_assoc($quy);
+        $user_id=$date['id'];
+
+        ?>
         <h2>Payment Method</h2>
       <div class="contain">
-        <h4>cash delivery</h4>
-        <h4>online payment</h4>
+        <div class="cash">
+        <h4>Cash Delivery</h4>
+        <a href="order.php?user_id=<?php echo $user_id;?>">Pay On Delivery</a>
+        </div>
+        <div class="online">
+        <h4>Online Payment</h4>
+        <a href="order.php?user_id=<?php echo $user_id;?>"> PayPal</a>
+        <a href="order.php?user_id=<?php echo $user_id;?>"> Credite Cart</a>
+        </div>
         <?php
 
         if(isset($_SESSION['fullname'])){

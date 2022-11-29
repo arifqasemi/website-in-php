@@ -23,3 +23,8 @@ footer{
     /* padding: 10px 60px; */
 
 }
+
+.online{
+    display: flex;
+    flex-direction: column;
+}

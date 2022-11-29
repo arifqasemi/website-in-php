@@ -1,7 +1,7 @@
 <?php
 include "../admin_area/connection.php";
 include "../function.php";
-
+session_start();
 ?>
 
 
@@ -51,20 +51,18 @@ if(isset($_POST['login'])){
    $date=mysqli_fetch_assoc($quy);
    $num_rows=mysqli_num_rows($quy);
     if($fetch>0){
+        $_SESSION['email']=$email;
         if(password_verify($password,$data['password'])){
             if($fetch==1 && $num_rows==0){
-                session_start();
                 $_SESSION['email']=$email;
                 header('location:../profile.php');
 
             }else{
+                $_SESSION['email']=$email;
              echo "<script>alert('you have some item in the cart')</script>";
             echo "<script>window.open('../payment.php','_self')</script>";
         }
-            // echo "<script>window.open('../payment.php','_self')</script>";
-         
-                        
-            
+       
         }else{
             echo "invalid password or email";
         }
