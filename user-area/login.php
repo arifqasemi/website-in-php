@@ -16,22 +16,11 @@ include "../function.php";
     <title>Document</title>
 </head>
 <body>
+
     <section class="loginform">
         <div class="container1">
             <h4>Login Form</h4>
-        <form action="login.php" method="post" class="form">
-            <input type="email" placeholder="Enter Email:" name="email" class="form-control">
-            <input type="password" placeholder="Enter Password:" name="password" class="form-control">
-            <input type="submit" value="Login" name="login" class="btn ">
-      </form>
-     <div><p>Not registered yet <a href="userRegisteration.php">Register Here</a></p></div>
-        </div>
-    </section>
-</body>
-</html>
-
-
-<?php
+            <?php
 
 if(isset($_POST['login'])){
     $email=$_POST['email'];
@@ -42,7 +31,7 @@ if(isset($_POST['login'])){
     $data=mysqli_fetch_assoc($resul);
     $fetch=mysqli_num_rows($resul);
 
-   
+   $error='';
 
     // getting product form cart it has
     $ip = geIpAddress();
@@ -64,11 +53,11 @@ if(isset($_POST['login'])){
         }
        
         }else{
-            echo "invalid password or email";
+           echo"<div class='error'>invalid password or email</div>";
         }
 
     }else{
-        echo "invalid password or email";
+        echo "<div class='error'>invalid password or email</div>";
     }
 }
 
@@ -76,3 +65,15 @@ if(isset($_POST['login'])){
 
 
 ?>
+        <form action="login.php" method="post" class="form">
+            <input type="email" placeholder="Enter Email:" name="email" class="form-control">
+            <input type="password" placeholder="Enter Password:" name="password" class="form-control">
+            <input type="submit" value="Login" name="login" class="btn ">
+      </form>
+     <div><p>Not registered yet <a href="userRegisteration.php">Register Here</a></p></div>
+        </div>
+    </section>
+</body>
+</html>
+
+

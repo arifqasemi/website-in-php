@@ -37,10 +37,10 @@ include "../function.php";
     $sendq=mysqli_query($conn,$check);
     $resu=mysqli_num_rows($sendq);
     if($password!=$repeatPassword){
-        echo "password didn't match";
+        echo"<div class='error'>password didn't match</div>";
     }
    else if($resu>0){
-    echo "already exists";
+    echo"<div class='error'> email already exists</div>";
    }else{
        $query="INSERT INTO user (username,email,password,IpAddress) Values('$username','$email','$password_hash','$ip')";
        $result=mysqli_query($conn, $query);
@@ -62,9 +62,10 @@ include "../function.php";
    }
 
 }
+
         ?>
          
-           
+        
     <input type="text" class="form-control" name="fullname" placeholder="Full Name:">
     <input type="emamil" class="form-control" name="email" placeholder="Email:">
     <input type="password" class="form-control" name="password" placeholder="Password:">
