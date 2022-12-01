@@ -13,10 +13,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecommerce</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <link rel="stylesheet" href="../index.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> -->
+    <!-- <link rel="stylesheet" href="../index.css"> -->
     <link rel="stylesheet" href="profile.css">
-    <link rel="stylesheet" href="cathegory.css">
+    <!-- <link rel="stylesheet" href="cathegory.css"> -->
 </head>
 <body>
    <section class="header">
@@ -73,9 +73,52 @@
             <a href='./login.php'>login</a>
             </div> ";
         }
-       
+
+      
+      
 ?>
       
+
+        </div>
+       <div class="display">
+       <?php
+if(isset($_SESSION['email'])){
+   
+              
+                    if(isset($_GET['my_order'])){
+                  echo"  <div class='orders'>
+                    <div class='details'>
+                        <h4>order Image</h4>
+                        <h4>order Price</h4>
+                        <h4>order Date</h4>
+                        <h4>order Status</h4>
+                    </div>";
+                   
+        
+                    getUserItem();
+                }
+                if(isset($_GET['pending_order'])){
+                    echo"  <div class='orders'>
+                    <div class='details'>
+                        <h4>order Image</h4>
+                        <h4>order Price</h4>
+                        <h4>order Date</h4>
+                        <h4>order Status</h4>
+                    </div>";
+                   
+        
+                    getUserItem();
+                  }
+
+                if(isset($_GET['edit_account'])){
+                    
+                    include('editeaccount.php');
+                  
+                }
+            }
+            ?>
+       </div>
+
 
         </div>
     </section>

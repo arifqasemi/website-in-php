@@ -1,7 +1,7 @@
 <?php
 include "../admin_area/connection.php";
 include "../function.php";
-session_start();
+// session_start();
 ?>
 
 

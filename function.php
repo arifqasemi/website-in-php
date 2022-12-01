@@ -379,12 +379,60 @@ function delete(){
 
 function getUserItem(){
     global $conn;
+    $ip = geIpAddress();
   $email=$_SESSION['email'];
   $requst="SELECT * FROM user where email='$email'";
   $quy=mysqli_query($conn,$requst);
   $date=mysqli_fetch_assoc($quy);
-  $username=$data['username'];
-  echo $username;
+  $IpAddress=$date['IpAddress'];
+//   echo $IpAddress;
+
+if(isset($_GET['my_order'])){
+$query="SELECT * FROM orders where userId='$IpAddress'";
+$res=mysqli_query($conn,$query);
+
+while($fetch=mysqli_fetch_array($res)){
+$orderImage=$fetch['orderImage'];
+$orderDate=$fetch['orderDate'];
+$orderPrice=$fetch['totalPrice'];
+$orderStatus=$fetch['orderStatus'];
+
+echo "<div class='cartItem-element'>
+<div class='prob'>
+<div class='product-image'>
+<img src='../image/$orderImage' alt=''>
+</div>
+<div class='title'>
+<h4>$$orderPrice</h4>
+<p>$orderDate</p>
+<p>$orderStatus</p>
+</div>
+</div>";
+}
+
+}
+if(isset($_GET['pending_order'])){
+    $query="SELECT * FROM orders where userId='$IpAddress'";
+    $res=mysqli_query($conn,$query);
+    while($fetch=mysqli_fetch_array($res)){
+        $orderImage=$fetch['orderImage'];
+        $orderDate=$fetch['orderDate'];
+        $orderPrice=$fetch['totalPrice'];
+        $orderStatus=$fetch['orderStatus'];
+        
+        echo "<div class='cartItem-element'>
+        <div class='prob'>
+        <div class='product-image'>
+        <img src='../image/$orderImage' alt=''>
+        </div>
+        <div class='title'>
+        <h4>$$orderPrice</h4>
+        <p>$orderDate</p>
+        <p>$orderStatus</p>
+        </div>
+        </div>";
+        }
+    }
 }
 
 

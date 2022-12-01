@@ -1,0 +1,13 @@
+.form{
+    width: 50%;
+}
+
+.edit-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   position: relative;
+   top: 50px;
+   width: 90%;
+}

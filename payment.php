@@ -42,7 +42,7 @@
           $requst="SELECT * FROM cartdetails where IpAddress='$ip'";
          $quy=mysqli_query($conn,$requst);
          $date=mysqli_fetch_assoc($quy);
-        $user_id=$date['id'];
+        $user_id=$date['IpAddress'];
 
         ?>
         <h2>Payment Method</h2>
@@ -58,10 +58,6 @@
         </div>
         <?php
 
-        if(isset($_SESSION['fullname'])){
-            session_start();
-            echo $_SESSION['fullname'];
-        }
      
         ?>
       </div>

@@ -1,6 +1,14 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
 .profile{
+    display: flex;
+    /* flex-direction: column; */
     height: 40vh;
-    width: 99%;
+    width: 100%;
     position: absolute;
     top: 10vh;
    
@@ -65,4 +73,108 @@ footer{
 
 .guest img{
     height: 100%;
+}
+
+.orders{
+    width: 100%;
+}
+
+.cartItem-element{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  
+}
+
+.product-image img{
+    width: 50%;
+}
+.prob{
+    display: flex;
+    padding: 0px 10px;
+  
+    
+}
+.title{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding-left: 150px;
+}
+
+
+.details{
+    display: flex;
+    justify-content: space-between;
+    text-transform: capitalize;
+    background-color: #ececf0;
+    padding: 0px 10px;
+
+}
+
+.display{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+   
+}
+
+
+
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ececf0;
+    padding: 30px 80px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.04);
+    height: 5px;
+    width: 90%;
+    z-index: 999;
+    position: fixed;
+    
+}
+.header img{
+    height: 50px;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.header .bar{
+    display: none;
+}
+
+.navbar li{
+    padding: 0 20px;
+    list-style: none;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar li a{
+  text-decoration: none;
+  color: var(---text-color-b);
+  font-weight: 600;
+}
+.navbar li a:hover, .navbar li a .active{
+    color: #05655f;
+}
+
+ .active::after
+ {
+    content: "";
+    width: 30px;
+    height: 4px;
+    background-color: rgb(11, 119, 138);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
 }
