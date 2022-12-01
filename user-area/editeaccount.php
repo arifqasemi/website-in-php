@@ -1,3 +1,11 @@
+<?php
+include "../admin_area/connection.php";
+// include "../function.php";
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,8 +36,9 @@ if(isset($_GET['edit_account'])){
         $name=$_POST['fullname'];
         $email=$_POST['email'];
         // $email=$_SESSION['email'];
-        $query="UPDATE user SET username='$name', email='$email' where IpAddress='$ip'";
+        $query=("UPDATE user SET username='$name' and email='$email' where IpAddress='$ip'");
         $resu=mysqli_query($conn,$query);
+        // echo $query;
         if($resu){
             echo "<script>alert('data updated successfully!')</script>";
         }
@@ -51,13 +60,7 @@ if(isset($_GET['edit_account'])){
     </div>
 
 <?php
-    // if(isset($_POST['submit'])){
-    //     $name=$_POST['fullname'];
-    //     $email=$_POST['email'];
-    //     $password=$_POST['password'];
-        
-
-    // }
+   
 
     ?>
 </body>

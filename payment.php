@@ -49,12 +49,23 @@
       <div class="contain">
         <div class="cash">
         <h4>Cash Delivery</h4>
+        <div class="ondelivery">
         <a href="order.php?user_id=<?php echo $user_id;?>">Pay On Delivery</a>
+        <img src="./image/on-delivery.png">
+        </div>
+    
         </div>
         <div class="online">
         <h4>Online Payment</h4>
+        <div class="paypal">
         <a href="order.php?user_id=<?php echo $user_id;?>"> PayPal</a>
+        <img src="./image/paypal.png">
+        </div>
+        <div class="credit">
         <a href="order.php?user_id=<?php echo $user_id;?>"> Credite Cart</a>
+        <img src="./image/credite.png">
+        </div>
+      
         </div>
         <?php
 

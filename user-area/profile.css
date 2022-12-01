@@ -83,6 +83,7 @@ footer{
     display: flex;
     flex-direction: column;
     width: 100%;
+   
   
 }
 
@@ -92,9 +93,23 @@ footer{
 .prob{
     display: flex;
     padding: 0px 10px;
+    background-color: #05655f;
+    border-radius: 5px;
+    margin-bottom: 10px;
   
     
 }
+.prob p{
+    color: white;
+}
+
+.prob a{
+   background-color: aliceblue;
+   padding: 6px 8px;
+   border-radius: 5px;
+}
+
+
 .title{
     display: flex;
     justify-content: space-between;
@@ -116,6 +131,8 @@ footer{
 .display{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
     width: 100%;
    
 }

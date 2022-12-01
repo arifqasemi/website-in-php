@@ -20,7 +20,7 @@ include "./function.php";
     if(isset($_GET['user_id'])){
     // $userId=$_GET['user_id'];
     $total=0;
-    $status='pending';
+    $status='Pay';
     $ip = geIpAddress();
     $query="SELECT * FROM cartdetails WHERE IpAddress='$ip'";
     $result=mysqli_query($conn,$query);

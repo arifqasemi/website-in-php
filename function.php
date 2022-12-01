@@ -396,6 +396,8 @@ $orderImage=$fetch['orderImage'];
 $orderDate=$fetch['orderDate'];
 $orderPrice=$fetch['totalPrice'];
 $orderStatus=$fetch['orderStatus'];
+$quantity=$fetch['amount'];
+$productId=$fetch['id'];
 
 echo "<div class='cartItem-element'>
 <div class='prob'>
@@ -403,9 +405,10 @@ echo "<div class='cartItem-element'>
 <img src='../image/$orderImage' alt=''>
 </div>
 <div class='title'>
-<h4>$$orderPrice</h4>
+<p>$quantity</p>
+<p>$$orderPrice</p>
 <p>$orderDate</p>
-<p>$orderStatus</p>
+<a href='confirm.php?productId=$productId'>$orderStatus</a>
 </div>
 </div>";
 }
@@ -419,6 +422,7 @@ if(isset($_GET['pending_order'])){
         $orderDate=$fetch['orderDate'];
         $orderPrice=$fetch['totalPrice'];
         $orderStatus=$fetch['orderStatus'];
+        $quantity=$fetch['amount'];
         
         echo "<div class='cartItem-element'>
         <div class='prob'>
@@ -426,9 +430,10 @@ if(isset($_GET['pending_order'])){
         <img src='../image/$orderImage' alt=''>
         </div>
         <div class='title'>
+        <p>$quantity</p>
         <h4>$$orderPrice</h4>
         <p>$orderDate</p>
-        <p>$orderStatus</p>
+        <a>$orderStatus</a>
         </div>
         </div>";
         }

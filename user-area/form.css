@@ -37,6 +37,7 @@
 
 .btn{
     background-color: #088178;
+    
 }
 
 .btn:hover{
@@ -44,4 +45,13 @@
     color: white;
 }
 
+
+.confirm{
+    padding: 10px 12px;
+    background-color: #088178;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+
+}
 

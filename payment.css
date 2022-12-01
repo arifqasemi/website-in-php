@@ -27,4 +27,31 @@ footer{
 .online{
     display: flex;
     flex-direction: column;
+    
+}
+
+.paypal{
+    display: flex;
+    align-items: center;
+    border: solid 1px grey;
+
+}
+
+.credit{
+    display: flex;
+    align-items: center;
+    border: solid 1px grey;
+}
+
+.ondelivery img{
+    width: 40%;
+}
+
+.ondelivery{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 1px grey;
+    width: 40%;
+    height: 50%;
 }

@@ -89,9 +89,10 @@ if(isset($_SESSION['email'])){
                   echo"  <div class='orders'>
                     <div class='details'>
                         <h4>order Image</h4>
+                        <h4>order quantity</h4>
                         <h4>order Price</h4>
                         <h4>order Date</h4>
-                        <h4>order Status</h4>
+                        <h4>Click To Pay</h4>
                     </div>";
                    
         
@@ -101,6 +102,7 @@ if(isset($_SESSION['email'])){
                     echo"  <div class='orders'>
                     <div class='details'>
                         <h4>order Image</h4>
+                        <h4>order quantity</h4>
                         <h4>order Price</h4>
                         <h4>order Date</h4>
                         <h4>order Status</h4>
@@ -114,6 +116,20 @@ if(isset($_SESSION['email'])){
                     
                     include('editeaccount.php');
                   
+                }
+
+                if(!isset($_GET['my_order'])){
+                    if(!isset($_GET['pending_order'])){
+                        if(!isset($_GET['edit_account'])){
+                            $ip = geIpAddress();
+                            $quer="SELECT * FROM orders where userId='$ip'";
+                            $resl=mysqli_query($conn,$quer);
+                            $dat=mysqli_fetch_assoc($resl);
+                            $totalItem=mysqli_num_rows($resl);
+                            echo " <h4>You Have $totalItem Orders, Click On My Order To Show</h4>";
+
+                        }
+                    }
                 }
             }
             ?>
