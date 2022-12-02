@@ -1,4 +1,19 @@
-<?php
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="admin.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="insertC">
+    <?php
 include "connection.php";
 if(isset($_POST['submit'])){
     $productTitle = $_POST['productTitle'];
@@ -29,32 +44,18 @@ if(empty($productTitle)){
      VALUES('$productTitle','$productDescription', '$selectProductCathegory','$selectProductBrand','$productImage1','$productImage2','$productPrice')";
     $res = mysqli_query($conn,$query);
    
-    echo'inserted successfully!';  
+    echo"<div class='success'>inserted successfully!</div>";  
 
   }
 
 
 }
 ?>
-
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="admin.css">
-    <title>Document</title>
-</head>
-<body>
-    <section class="insertC">
     <h2>Insert Product</h2>
        <form action="" method="post" class="form" enctype="multipart/form-data">
-        <label for="input">product title</label>
+        <label for="input">Product title</label>
            <Input class="input" placeholder="Enter Product Title" name="productTitle" id="input">
-           <label for="input">product description</label>
+           <label for="input">Product description</label>
            <Input class="input" placeholder="Enter product Description" name="productDescription" id="input">
            <select name="productCathegory" id="">
             <option value="">select cathegory</option>
@@ -73,7 +74,7 @@ if(empty($productTitle)){
 
            </select>
            <select name="selectProductBrand" id="">
-            <option value="">select brand</option>
+            <option value="">Select brand</option>
             <?php
 
                     $check = "SELECT * FROM brand";
@@ -87,11 +88,11 @@ if(empty($productTitle)){
                     ?>
 
            </select>
-           <label for="input">product image</label>
+           <label for="input">Product image</label>
            <input type="file" class="image" name="ProductImage1">
-           <label for="input">product image</label>
+           <label for="input">Product image</label>
            <input type="file" class="image" name="ProductImage2">
-           <label for="input">product price</label>
+           <label for="input">Product price</label>
            <Input class="input" placeholder="Enter product Description" name="productPrice" id="input" autocomplete="off">
         <button name="submit" class="btn">Insert Product</button>
       </form>

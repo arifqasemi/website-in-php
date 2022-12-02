@@ -24,11 +24,11 @@
             </div>
             <div class="product-profil">
                 <a href="insertProduct.php">Insert product</a>
-                <a href="admin.php?viewProduct">View product</a>
+                <a href="admin.php?view-product">View product</a>
                 <a href="admin.php?insert-Cathegory">Insert Cathegory</a>
-                <a href="">View Cathegory</a>
+                <a href="admin.php?view-cathegory">View Cathegory</a>
                 <a href="admin.php?insert-brand">Insert Brand</a>
-                <a href="">View Brand</a>
+                <a href="admin.php?view-brand">View Brand</a>
                 <a href="">All Orders</a>
                 <a href="">All Payments</a>
                 <a href="">List User</a>
@@ -46,6 +46,17 @@
         }
         if(isset($_GET['insert-Product'])){
             include ('insertProduct.php');
+        }
+
+        if(isset($_GET['view-product'])){
+            include ('viewProduct.php');
+        }
+        if(isset($_GET['view-cathegory'])){
+            include ('viewCathegory.php');
+        }
+
+        if(isset($_GET['view-brand'])){
+            include ('viewbrand.php');
         }
         ?>
     </section>

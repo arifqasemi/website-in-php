@@ -106,3 +106,10 @@ input{
 input::placeholder{
     height: 15px;
 }
+
+.success{
+    background-color: green;
+    text-transform: capitalize;
+    color: white;
+    width: 100%;
+}
